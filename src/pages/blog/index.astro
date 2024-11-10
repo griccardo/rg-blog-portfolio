@@ -5,7 +5,7 @@ import { getCollection } from "astro:content";
 import { blogPageContent } from "../../config";
 
 const posts = await getCollection("posts");
-posts.sort((a, b) => {
+posts.sort((a: any, b: any) => {
   const dateA = new Date(a.data.pubDate).getTime();
   const dateB = new Date(b.data.pubDate).getTime();
   return dateB - dateA;
@@ -23,7 +23,7 @@ for (const post of posts) {
 
     <div class="grid grid-cols-1 gap-10 sm:gap-6 mb-10">
       {
-        posts.map((post) => (
+        posts.map((post: any) => (
           <a
             href={`/blog/${post.slug}`}
             class=" sm:flex sm:flex-row-reverse sm:justify-between sm:gap-6 post"
