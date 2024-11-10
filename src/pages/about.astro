@@ -37,7 +37,7 @@ import SocialLinkBox from "../components/SocialLinkBox.astro";
     <h2 class="mb-8 sm:mb-0 opacity-60">Lavoro</h2>
     <div>
       <div class="mb-6">
-        <Markdown of={aboutPageContent.work.description} />
+        {aboutPageContent.work.description}
       </div>
       <div class="grid grid-cols-1 group">
         {aboutPageContent.work.items.map((item) => <ResumeItem {...item} />)}
@@ -48,7 +48,7 @@ import SocialLinkBox from "../components/SocialLinkBox.astro";
     <h2 class="mb-8 sm:mb-0 opacity-60">Contatti</h2>
     <div>
       <div class="mb-6">
-        <Markdown of={aboutPageContent.connect.description} />
+        {aboutPageContent.connect.description} 
       </div>
       <div class="grid grid-cols-2 gap-2 group">
         {
