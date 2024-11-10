@@ -12,7 +12,7 @@ posts.sort((a, b) => {
 });
 for (const post of posts) {
   const { remarkPluginFrontmatter } = await post.render();
-  post.data.readingTime = remarkPluginFrontmatter.minutesRead;
+  post.data.readingTime = remarkPluginFrontmatter.minutesRead.replace("min read", "minuti di lettura");
 }
 ---
 
@@ -36,9 +36,8 @@ for (const post of posts) {
               class={"rounded-lg w-[100px] h-[100px] object-cover"}
             />
             <div class="mt-4 sm:my-auto">
-              <p class="opacity-60 mb-2">
-                {post.data.pubDate.toLocaleDateString()} ·{" "}
-                {post.data.readingTime}
+              <p class="opacity-60 mb-2 text-sm">
+                {post.data.pubDate.toLocaleDateString("en-GB")} · {post.data.readingTime}
               </p>
               <h3 class="font-medium hover-underline">{post.data.title}</h3>
               <p class="text-sm opacity-60 mt-2 mb-3">{post.data.description}</p>

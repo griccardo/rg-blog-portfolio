@@ -52,7 +52,7 @@ posts.splice(2)
     </div>
   </section>
   <section class="mt-20 max-w-2xl mx-auto px-6">
-    <h2 class="mb-8">Latest Posts</h2>
+    <h2 class="mb-8">Ultimi Posts</h2>
     <div class="grid grid-cols-1 gap-10 sm:gap-6 mb-10">
       {
         posts.map((post) => (
@@ -68,8 +68,8 @@ posts.splice(2)
               class={"rounded-lg w-[100px] h-[100px] object-cover"}
             />
             <div class="mt-4 sm:my-auto">
-              <p class="opacity-60 mb-2">
-                {post.data.pubDate.toLocaleDateString()}
+              <p class="opacity-60 mb-2 text-sm">
+                {post.data.pubDate.toLocaleDateString("en-GB")}
               </p>
               <h3 class="font-medium hover-underline">{post.data.title}</h3>
               <p class="text-sm opacity-60 mt-2 mb-3">{post.data.description}</p>
@@ -82,7 +82,7 @@ posts.splice(2)
       <a
         href="/blog"
         class="underline underline-offset-4 opacity-60 hover:opacity-100 transition-opacity"
-        >View all</a
+        >Vedi tutto</a
       >
     </div>
   </section>
