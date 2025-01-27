@@ -191,3 +191,14 @@ export const blogPageContent: BlogPageContent = {
   },
   subtitle: "Consigli e riflessioni su tecnologia e sviluppo web.",
 };
+
+
+// SwipSwap
+export const swipSwapContent = {
+  seo: {
+    title: "SwipSwap",
+    description:
+      "SwipSwap app is a mobile application that allows users to swap items with other users.",
+    image: identity.logo,
+  },
+};
